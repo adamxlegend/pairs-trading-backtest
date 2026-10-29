@@ -1,0 +1,12 @@
+Test period: 2021-01-01 to 2025-12-30
+Cost assumption: 5.0 bps per unit of position change
+
+                            ann_return ann_vol  sharpe max_drawdown total_return  trades
+strategy                                                                                
+Pairs (z-score rules)             0.5%    2.7%    0.19        -6.2%         2.4%     262
+Pairs + logistic regression       0.3%    1.7%    0.17        -3.4%         1.4%     131
+SPY buy and hold                 13.6%   17.1%    0.80       -26.2%        83.0%    <NA>
+
+Logistic regression: trained on 1369 rows, best C = 0.01, approval cutoff = 0.556
+Test-period candidates (|z| >= 2.0): n=1725, AUC=0.475, accuracy=0.475, accuracy of always saying yes=0.510
+Coefficients (standardized features): z=-0.08, abs_z=-0.04, dz1=-0.03, dz5=+0.03, vol_ratio=-0.05
